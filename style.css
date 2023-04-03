@@ -1,0 +1,77 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #70E1F5, #FFD194);
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    min-height: 100vh;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 12px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.prev-operand {
+    color:rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.calculator > button {
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, .75)
+}
+
+.calculator > button:hover {
+    background-color: rgba(255, 255, 255, .9)
+}
+
+#equalsBtn {
+    grid-column: span 2;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+    margin: 30px auto 0 auto;
+    gap: 7px;
+}
+
+#divider {
+    font-size: 22px;
+}
+
+#github {
+    width: 20px;
+    height: 20px;
+}
